@@ -43,13 +43,6 @@ nav.navbar .title {
     display: flex;
     color: white;
 }
-nav.navbar .logo {
-    width: 100px;
-    height: 30px;
-    background-color: skyblue;
-    margin-right: 15px;
-    background-image: image();
-}
 nav.navbar .navigation a:not(:last-child) {
     margin-right: 50px;
     color: white;
@@ -75,7 +68,7 @@ section.bg {
     background-color: palegoldenrod;
 }
 form{
-    margin: 50px auto;
+    margin-top: 50px;
     width: 500px;
     background-color: #9AE8F2;
     padding: auto;

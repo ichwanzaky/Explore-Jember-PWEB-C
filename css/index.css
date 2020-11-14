@@ -43,13 +43,6 @@ nav.navbar .title {
     display: flex;
     color: white;
 }
-nav.navbar .logo {
-    width: 100px;
-    height: 30px;
-    background-color: skyblue;
-    margin-right: 15px;
-    background-image: image();
-}
 nav.navbar .navigation a:not(:last-child) {
     margin-right: 50px;
     color: white;
@@ -74,5 +67,60 @@ section.bg {
     height: 100vh;
     background-color: palegoldenrod;
 }
-
-.middle{
+.footer{
+    float: left;
+    width: 100%;
+    height: 15cm;
+}
+.footer img {
+    width: 1300px;
+    margin-right: 100px ;
+    height: 300px;
+}
+.box{
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgba(158, 184, 255, 0.384);
+}
+.box-kiri{
+    width: 210px;
+    text-align: center;
+    margin-left: 150px;
+}
+.box-tengah{
+    width: 210px;
+    text-align: center;
+}
+.box-kanan{
+    width: 210px;
+    text-align: center;
+    margin-right: 150px;
+} 
+.box2{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    color: white;
+    background-color: #088BB5;
+}
+.box2-contain img{
+    width: 300px;
+    transition: 0.5s;
+}
+.box2-contain img:hover{
+    transform: scale(1.5) translateZ(20px) rotate(360deg);
+}
+.box2-contain{
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+}
+.footer{
+    width: 100%;
+    height: auto;
+}

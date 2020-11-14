@@ -52,6 +52,13 @@ nav.navbar .navigation a:not(.button):hover {
     border-bottom: 1px solid white;
 }
 
+section.bg {
+    width: 80%;
+    height: 1000px;
+    background: url('../../image/nanggelan.jpg') no-repeat;
+    background-size: cover;
+    margin: 0px auto;
+}
 
 /* flex */
 .flex-container {
@@ -62,6 +69,13 @@ nav.navbar .navigation a:not(.button):hover {
     height: 100vh;
     background-color: palegoldenrod;
 }
+.kotak2{
+    width: 80%;
+    background-color: #E4E1E1;
+    height: 20cm;
+    margin: 0px auto;
+    text-align: justify;
+}
 .kotak{
     width: 80%;
     background-color: lightblue;
@@ -71,29 +85,49 @@ nav.navbar .navigation a:not(.button):hover {
 .kotak h1{
     font-size: 20px;
     margin-left: 20px;
-}
-.form_isi{
-    width: 80%;
-    margin: 0px auto;
-    height: 600px;
-}
-.form_isi form input{
-    width: 100%;
-    height: 1cm;
-    margin: 5px auto;
-    background-color: rgb(209, 209, 209);
-    border-radius: 30px;
-    border: none;
-}
-.form_isi form label{
-    font-size: 20px;
-    margin-left: 10px;
-}
-#pesan{
-    height: 7cm;
+    padding: auto;
 }
 .footer img {
     width: 1300px;
-    margin right: 100px ;
+    margin-right: 100px ;
     height: 300px;
+}
+.box{
+    width: 80%;
+    height: auto;
+    margin: 0px auto;
+    margin-top: 50px;
+    display: flex;
+    background-color: rgba(158, 184, 255, 0.384);
+}
+.box-kiri{
+    width: 30%;
+    height: 215px;
+}
+.box-kiri img{
+    width: 100%;
+}
+.box-kanan{
+    width: 40%;
+    height: 215px;
+    text-align: center;
+} 
+.box-kanan p{
+    margin: auto;
+}
+.readmore{
+    display: flex;   
+    width: 30%; 
+}
+
+.readmore a{
+    text-decoration: none;
+    margin: auto;
+    color: black;
+    background-color: lightblue;
+    padding: 5px;
+    border-radius: 15px;
+}
+.readmore a:hover{
+    background-color: grey;
 }
