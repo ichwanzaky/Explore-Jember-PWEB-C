@@ -1,50 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar</title>
     <link rel="stylesheet" href="css/daftar.css">
+    <script src="daftar.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="title">
-                <h1 style="font-weight: 500;"><strong>EXPLORE</strong> JEMBER</h1>
-            </div>
-            <div class="navigation">
-                <a href="index.html">BERANDA</a>
-                <a href="hubungi.html">HUBUNGI KAMI</a>
-                <a href="login.html">LOGIN</a>
-                <a class="button button-white"> <input type="" placeholder="klik disini untuk mencari"></a>
-            </div>
+    <nav>
+        <div class="logo">
+            <h4>EXPLORE JEMBER</h4>
+        </div>
+
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="hubungi.html">Hubungi Kami</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="">Cari</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </nav>
-    <br>
-    <br>
-    <section class="bg">
-    <br>
+    <script src="navbar.js"></script>
     <center>
-        <form>
+        <form name="biodata" method="POST" action="index.html">
             <fieldset>
-                <br>
-                <h1><b>DAFTAR</b></h1>
-                <p>
-                    <input type="text" name="masukkan username" placeholder="masukkan username" />
-                    <input type="text" name="masukkan e-mail" placeholder="masukkan e-mail" />
-                    <input type="number" name="masukkan nomor handphone" placeholder="masukkan nomor handphone" />
-                    <input type="password" name="masukkan password" placeholder="masukkan password" />
-                </p>
-                <p>
-                    <label style="font-size: 15px;"> Tanggal Lahir :</label>
-                    <input type="date" name="tanggal" />
-                </p>
-                <p>
-                    <input type="submit" name="submit" value="DAFTAR" />
-                </p>
+            <br>
+            <h2><b>DAFTAR</b></h2>
+            <br>
+            <p>
+                <input type="text" name="namadepan" placeholder="Nama Depan" />
+                <input type="text" name="namabelakang" placeholder="Nama Belakang" />
+                <input type="text" name="email" placeholder="Email" />
+                <input type="number" name="nohandphone" placeholder="No Handphone" />
+                <input type="password" name="password" placeholder="password" />
+            </p>
+            <br>
+            <p>
+                <label>Tanggal Lahir:</label>
+                <input type="date" name="tanggal" />
+            </p>
+            <br>
+            <p>
+                <label>Jenis kelamin:</label>
+                <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+                <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+            </p>
+            <br>
+            <p>
+                <input type="button"  onclick="terimainput()" value="DAFTAR"/>   
+            </p>
+            <br>
             </fieldset>
         </form>
-        </center>
-        
-    </section>
+        <table border="2px" id="input">
+            <tr>
+                <td>Nama Depan</td>
+                <td>Nama Belakang</td>
+                <td>Email</td>
+                <td>No Handphone</td>
+                <td>Password</td>
+                <td>Tanggal Lahir</td>
+                <td>Jenis Kelamin</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </center>
+</body>
 </html>

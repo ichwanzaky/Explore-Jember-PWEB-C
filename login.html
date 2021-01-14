@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/daftar.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="title">
-                <h1 style="font-weight: 500;"><strong>EXPLORE</strong> JEMBER</h1>
-            </div>
-            <div class="navigation">
-                <a href="index.html">BERANDA</a>
-                <a href="hubungi.html">HUBUNGI KAMI</a>
-                <a href="login.html">LOGIN</a>
-                <a class="button button-white"> <input type="" placeholder="klik disini untuk mencari"></a>
-            </div>
+    <nav>
+        <div class="logo">
+            <h4>EXPLORE JEMBER</h4>
+        </div>
+
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="hubungi.html">Hubungi Kami</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="">Cari</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </nav>
-    <section class="bg">
-    <br>
+    <script src="navbar.js"></script>
     <center>
-        <form>
+        <form name="biodata" method="POST" action="index.html">
             <fieldset>
             <br>
             <h1><b>LOGIN</b></h1>
+            <br>
             <p>
-                <input type="text" name="masukkan username/e-mail" placeholder="masukkan username" />
-                <input type="password" name="masukkan password" placeholder="masukkan password" />
+                <input type="text" name="username" placeholder="masukkan username/email" />
+                <input type="password" name="password" placeholder="masukkan password" />
             </p>
+            <br>
             <p>
-                <input type="submit" name="submit" value="LOGIN" />
-            </p>
+                <a href="index.html">
+                <input type="button" onclick="terimainput()" value="LOGIN"/>
+            </p></a>
             <br>
             <p>
                 Lupa password ?
@@ -42,7 +48,6 @@
             <br>
             </fieldset>
         </form>
-        </center>
-        
-    </section>
+    </center>
+</body>
 </html>
