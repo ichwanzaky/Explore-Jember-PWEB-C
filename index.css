@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+body video {
+    width: 90%;    
+}
+
+/* navbar */
+nav {
+    display: flex;
+    background-color: #088BB5;
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    color: white;
+    height: 80px;
+    align-items: center;
+}
+nav .logo{
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: lightblue;
+}
+
+/* hamburger menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+.menu-toggle input{
+    position: absolute;
+    width: 400px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* hamburger animAI */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45 deg); translate: (-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45 deg); translate: (-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+    opacity: 0;
+    transform: scale();
+}
+/* responsive */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px){
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px){
+    .menu-toggle{
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #088BB5;
+        z-index: 1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.box{
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: rgba(158, 184, 255, 0.54);
+    color:  #088BB5;
+}
+body h1{
+    font-weight: bold;
+}
+.box-kiri{
+    width: 250px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.box-tengah{
+    width: 250px;
+    text-align: center;
+}
+.box-kanan{
+    width: 250px;
+    text-align: center;
+} 
+.box2{
+    width: 100%;
+    height: auto;
+    color: white;
+    background-color: #088BB5;
+}
+.box2-contain img{
+    width: 300px;
+    transition: 0.5s;
+}
+.box2-contain img:hover{
+    transform: scale(1.5) translateZ(20px) rotate(360deg);
+}
+.box2-contain{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    display: flex;
+}
+.footer{
+    width: 80%;
+    margin: auto;
+}
+.footer img {
+    width: 100%;
+}
+.kotak{
+    width: 80%;
+    background-color: lightblue;
+    height: 1.5cm;
+    margin: 0px auto;
+}
+.kotak h1{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.form_isi{
+    width: 80%;
+    margin: 0px auto;
+    height: 600px;
+}
+.form_isi form input{
+    width: 100%;
+    height: 1cm;
+    margin: 5px auto;
+    background-color: rgb(209, 209, 209);
+    border-radius: 30px;
+    border: none;
+}
+.form_isi form label{
+    font-size: 15px;
+    margin-left: 10px;
+}
+#pesan{
+    height: 7cm;
+}
+input[type=submit] {
+    padding: 10px;
+    width: 100px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: #088BB5;
+    border-radius: 20px;
+}
