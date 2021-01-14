@@ -1,90 +1,165 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet');
-
-/* css reset */
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
     font-family: 'poppins', sans-serif;
-    font-weight: bold;
-}
-a {
-    text-decoration: none;
+    overflow-x: hidden;
 }
 
-.container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+body video {
+    width: 90%;    
 }
 
-.button {
-    font-size: 10px;
-    font-weight: 2000;
-    padding: 5px 25px;
-    border: none;
-    border-radius: 15px;
-}
-
-.button-white {
-    color: gray;
-    background-color: white;
-    box-shadow: 3px 3px 10px gray(0, 0, 0, 0.329);
-}
-
-nav.navbar {
-    background-color: #088BB5;
-}
-nav.navbar > div.container {
-    padding: 30px 0;
+/* navbar */
+nav {
     display: flex;
+    background-color: #088BB5;
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    color: white;
+    height: 80px;
+    align-items: center;
+}
+nav .logo{
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
     justify-content: space-between;
 }
-nav.navbar .title {
-    display: flex;
+
+nav ul li a{
     color: white;
-}
-nav.navbar .navigation a:not(:last-child) {
-    margin-right: 50px;
-    color: white;
-}
-nav.navbar .navigation a:not(.button):hover {
-    border-bottom: 1px solid white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
 }
 
-section.bg {
-    width: 100%;
-    height: 600px;
-    background: url('../../image/papuma.jpg') no-repeat;
-    background-size: cover;
+nav ul li a:hover{
+    color: lightblue;
 }
 
-/* flex */
-.flex-container {
-    display: flex;
-    /* flex-direction: row; */
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: palegoldenrod;
+/* hamburger menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+.menu-toggle input{
+    position: absolute;
+    width: 400px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* hamburger animAI */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45 deg); translate: (-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45 deg); translate: (-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+    opacity: 0;
+    transform: scale();
+}
+/* responsive */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px){
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px){
+    .menu-toggle{
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #088BB5;
+        z-index: 1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+body{
+    background-color: black;
+    background-image: url("../../image/papuma.jpg");
+    background-position: center;
+    background-attachment: fixed;
 }
 form{
-    margin-top: 50px;
+    margin: 50px auto;
     width: 500px;
-    background-color: #9AE8F2;
-    padding: auto;
+    border-color:blue;
+    background-color: skyblue;
 }
 input[type=text], input[type=password], input[type=number] {
-    margin: 20px auto;
+    margin: 5px auto;
     width: 400px;
     padding: 10px;
-    text-align: center;
 }
-input[type=submit] {
+input[type=button] {
     padding: 10px;
-    margin: 20px auto;
-    width: 120px;
+    width: 100px;
     border: 1px solid #fff;
     color: #fff;
-    background:  #088BB5;
+    background: #088BB5;
+    border-radius: 20px;
 }
-
+table{
+    margin: 50px auto;
+    border-color: blue;
+    background-color: whitesmoke;
+    text-align: center;
+    width: auto;
+    height: 80px;
+}
